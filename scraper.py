@@ -3,16 +3,25 @@
 # The next line is importing the scraper wiki library
 import scraperwiki
 import lxml.html
-#
+
+## the lines above imports the library
+
 print("hello")
-# # Read in a page
+## prints the word hello
+
 html = scraperwiki.scrape("http://foo.com")
+## grabs html from the webpage
 print(html)
-#
+## displays the html of the webpage
+
 # # Find something on the page using css selectors
-# root = lxml.html.fromstring(html)
-# root.cssselect("div[align='left']")
-#
+root = lxml.html.fromstring(html)
+## html is being used as an ingredient by the function fromstring which is part of the lxml.html library
+## root is the new variable
+print(root.cssselect("div[align='left']")
+## lxml.html is using the root variable
+
+      
 # # Write out to the sqlite database using scraperwiki library
 # scraperwiki.sqlite.save(unique_keys=['name'], data={"name": "susan", "occupation": "software developer"})
 #
