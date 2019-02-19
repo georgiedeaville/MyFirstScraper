@@ -22,10 +22,21 @@ print(root.cssselect("div#footer"))
 ## lxml.html is using the root variable
 print(root)
 
+
 listofmatches=root.cssselect("a")
+
+record={}
+
 for match in listofmatches:
       print(match)
+      record["link"] = lxml.html.tostring(match)
       print(lxml.html.tostring(match))
+      print(record)
+      scraperwiki.sqlite.save(unique_keys=['link'],data=record)
+      
+
+      
+      
 
 # # Write out to the sqlite database using scraperwiki library
 # scraperwiki.sqlite.save(unique_keys=['name'], data={"name": "susan", "occupation": "software developer"})
