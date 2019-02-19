@@ -20,6 +20,7 @@ root = lxml.html.fromstring(html)
 ## root is the new variable
 print(root.cssselect("div#footer"))
 ## lxml.html is using the root variable
+print(root)
 
       
 # # Write out to the sqlite database using scraperwiki library
