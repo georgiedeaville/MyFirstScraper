@@ -18,7 +18,7 @@ print(html)
 root = lxml.html.fromstring(html)
 ## html is being used as an ingredient by the function fromstring which is part of the lxml.html library
 ## root is the new variable
-print(root.cssselect("a"))
+print(root.cssselect("div#footer"))
 ## lxml.html is using the root variable
 
       
